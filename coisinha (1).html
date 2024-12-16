@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de Programação JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com JavaScript</h1>
+
+        <h2>Qual seu Pokémon inicial?</h2>
+        
+        <button onclick="verificarPokemon('bulbassauro')">Bulbassauro</button>
+        <button onclick="verificarPokemon('charmander')">Charmander</button>
+        <button onclick="verificarPokemon('squirtle')">Squirtle</button>
+
+        <div id="resultado"></div>
+
+        <script>
+            function verificarPokemon(pokemon) {
+                switch (pokemon) {
+                    case "bulbassauro":
+                        document.getElementById("resultado").innerHTML = `<h1>${pokemon} é um Pokémon de planta!</h1>`;
+                        break;
+                    case "charmander":
+                        document.getElementById("resultado").innerHTML = `<h1>${pokemon} é um Pokémon de fogo!</h1>`;
+                        break;
+                    case "squirtle":
+                        document.getElementById("resultado").innerHTML = `<h1>${pokemon} é um Pokémon de água!</h1>`;
+                        break;
+                    default:
+                        document.getElementById("resultado").innerHTML = `<h1>${pokemon} não é reconhecido no momento!</h1>`;
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
